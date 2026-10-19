@@ -63,3 +63,7 @@ Add this to `~/Library/Application Support/Claude/claude_desktop_config.json`:
 Desktop apps may not inherit your shell's `PATH`. If you see "yt-dlp not found", set `YTDLP_PATH=/opt/homebrew/bin/yt-dlp`. If ffmpeg isn't found either, also add `/opt/homebrew/bin` to `PATH` in the `env` block.
 
 Only download content you have the rights to.
+
+## "respect" shortcut
+
+A user-level skill at `~/.claude/skills/respect/SKILL.md` adds a shortcut. Type `respect <link | video id | song name>`, or `/respect …`, in Claude Code, and it downloads the MP3 without asking for confirmation. Typing `respect list` shows what you've already downloaded.
