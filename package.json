@@ -1,0 +1,24 @@
+{
+  "name": "yt-audio-mcp",
+  "version": "1.0.0",
+  "description": "MCP server that downloads YouTube / YouTube Music audio as MP3 via yt-dlp + ffmpeg",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch"
+  },
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  },
+  "bin": {
+    "yt-audio-mcp": "dist/index.js"
+  }
+}
