@@ -1,0 +1,31 @@
+name: Bug report
+description: A download or tool call doesn't work
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: The tool you called, the input, and the error or wrong result.
+    validations:
+      required: true
+  - type: input
+    id: client
+    attributes:
+      label: MCP client
+      placeholder: Claude Code 2.x / Claude Desktop / Cursor
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: OS, Node.js and yt-dlp versions
+      placeholder: macOS 15.1, Node 22.11, yt-dlp 2026.10.01
+    validations:
+      required: true
+  - type: checkboxes
+    id: upgraded
+    attributes:
+      label: Checks
+      options:
+        - label: I upgraded yt-dlp and the problem still happens

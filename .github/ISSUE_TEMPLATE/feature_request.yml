@@ -1,0 +1,18 @@
+name: Feature request
+description: Suggest a tool, option or client guide
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would you like to do?
+    validations:
+      required: true
+  - type: dropdown
+    id: help
+    attributes:
+      label: Would you like to work on it?
+      options:
+        - "Yes, I'd like to open a PR"
+        - Maybe, with some guidance
+        - "No"
