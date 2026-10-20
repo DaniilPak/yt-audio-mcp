@@ -1,15 +1,53 @@
 {
   "name": "yt-audio-mcp",
   "version": "1.0.0",
-  "description": "MCP server that downloads YouTube / YouTube Music audio as MP3 via yt-dlp + ffmpeg",
+  "description": "MCP server that downloads YouTube and YouTube Music audio as MP3 files, with search and a local library. Works with Claude Code, Claude Desktop, Cursor and any MCP client.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "youtube",
+    "youtube-music",
+    "mp3",
+    "yt-dlp",
+    "ffmpeg",
+    "claude",
+    "claude-code",
+    "audio",
+    "downloader"
+  ],
+  "homepage": "https://github.com/DaniilPak/yt-audio-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/DaniilPak/yt-audio-mcp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaniilPak/yt-audio-mcp.git"
+  },
+  "license": "MIT",
+  "author": "Daniil Pak",
+  "type": "module",
   "main": "dist/index.js",
+  "bin": {
+    "yt-audio-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist/index.js",
+    "dist/ytdlp.js",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "test": "npm run build && node --test dist/*.test.js",
+    "prepublishOnly": "npm run build"
   },
-  "license": "MIT",
-  "type": "module",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.1",
     "zod": "^4.6.7"
@@ -17,8 +55,5 @@
   "devDependencies": {
     "@types/node": "^26.6.5",
     "typescript": "^7.0.2"
-  },
-  "bin": {
-    "yt-audio-mcp": "dist/index.js"
   }
 }
